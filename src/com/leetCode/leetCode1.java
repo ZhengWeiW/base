@@ -32,5 +32,6 @@ package com.leetCode;
 public class leetCode1 {
     public static void main(String[] args) {
 
+      //提交14
     }
 }
