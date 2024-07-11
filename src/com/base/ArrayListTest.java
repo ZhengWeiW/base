@@ -1,4 +1,4 @@
-package zcc.base;
+package com.base;
 
 import com.base.User;
 
@@ -19,7 +19,7 @@ public class ArrayListTest {
          int list3[] = new int[5];
          list3[0] = 1;
          list3[1] = 2;
-         HashSet set = new HashSet();
+         HashSet<String> set = new HashSet<>();
          set.add("1");
 
 
