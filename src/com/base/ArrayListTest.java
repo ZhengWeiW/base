@@ -41,7 +41,6 @@ public class ArrayListTest {
 
          System.out.println(userlist);
 
-
          /**
           *功能描述
           * 前置递增运算符 (++i)：优先级较高。
