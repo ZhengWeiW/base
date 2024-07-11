@@ -31,3 +31,20 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Created by .ignore support plugin (hsz.mobi)
+
+#################################
+# 编译器：idea
+#################################
+*.classpath
+*.gitignore
+*.project
+*.iml
+*/target/
+#################################
+# 编译器：eclipse
+#################################
+.settings
+.idea/
