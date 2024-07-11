@@ -65,5 +65,4 @@ public class ArrayListTest {
          System.out.println(k);  //
 
          }
-
 }
