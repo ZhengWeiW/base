@@ -22,7 +22,7 @@ public class ArrayListTest {
          HashSet<String> set = new HashSet<>();
          set.add("1");
 
-
+        //提交7
          System.out.println(list1.toString());
          System.out.println(list2.toString());
          System.out.println(list3.toString());
@@ -40,6 +40,9 @@ public class ArrayListTest {
              user.setUserName(user.getUserName()+user.getUserName());
          }
 
+
+         //11
+         //测试提交12
          System.out.println(userlist);
 
          /**
@@ -63,6 +66,7 @@ public class ArrayListTest {
          System.out.println(i); // 5
          System.out.println(j); // 2
          System.out.println(k);  //
-
+         //测试提交10
          }
+
 }
