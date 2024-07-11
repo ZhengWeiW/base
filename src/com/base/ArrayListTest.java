@@ -65,7 +65,7 @@ public class ArrayListTest {
          System.out.println(i); // 5
          System.out.println(j); // 2
          System.out.println(k);  //
-
+         //测试提交10
          }
 
 }
