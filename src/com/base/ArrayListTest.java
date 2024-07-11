@@ -22,7 +22,7 @@ public class ArrayListTest {
          HashSet<String> set = new HashSet<>();
          set.add("1");
 
-
+        //提交7
          System.out.println(list1.toString());
          System.out.println(list2.toString());
          System.out.println(list3.toString());
