@@ -52,7 +52,6 @@ public class ArrayListTest {
           * @param  * @param args
           * @return
           */
-
          int i =1;
          i=i++;
          System.out.println(i);//1
