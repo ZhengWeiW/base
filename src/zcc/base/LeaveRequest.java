@@ -18,5 +18,4 @@ public class LeaveRequest {
     public double getAmount() {
         return amount;
     }
-
 }
