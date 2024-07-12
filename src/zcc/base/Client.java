@@ -1,6 +1,8 @@
 package zcc.base;
 
+
 public class Client {
+
 
     public static void main(String[] args) {
 
@@ -22,11 +24,12 @@ public class Client {
 
         //处理采购请求
         System.out.println("------采购金额为1600的审核流程情况------");
-        groupLeader.handleLeaveRequest(request1);
+        //groupLeader.handleLeaveRequest(request1);
         System.out.println("------采购金额为3800的审核流程情况------");
-        groupLeader.handleLeaveRequest(request2);
+        //groupLeader.handleLeaveRequest(request2);
         System.out.println("------采购金额为6200的审核流程情况------");
         groupLeader.handleLeaveRequest(request3);
+
 
     }
 }

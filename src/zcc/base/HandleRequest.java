@@ -1,5 +1,6 @@
 package zcc.base;
 
+
 public abstract class HandleRequest {
 
     //声明上级领导
