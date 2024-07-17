@@ -45,6 +45,7 @@ public class StreamDemo {
                 //.limit(1)
                 .forEach(System.out::println);
 
+        System.out.println("------------------");
         // map解释：
         List<Integer> list2 = Arrays.asList(1, 2, 3);
         list2 = list2.stream().map(x -> {
