@@ -37,5 +37,8 @@ public class Operators {
         System.out.println("左移 10 位后的数据 " + d);
         System.out.println("左移 10 位后的数据对应的二进制字符 " + Integer.toBinaryString(d));
 
+        Integer i1 = 40;
+        Integer i2 = new Integer(40);
+        System.out.println(i1==i2);
     }
 }
