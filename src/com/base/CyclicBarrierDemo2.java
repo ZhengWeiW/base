@@ -6,18 +6,19 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
-* @Description:  CyclicBarrier 与 CountDownLatch 都能实现阻塞主线程的效果，CountDownLatch 是-1，CyclicBarrier 是+1，并且CyclicBarrier是可以重复使用，CountDownLatch不可以重复使用
-* @Param:
-* @return:
-* @Author: zcc
-* @Date: 11:08 2024/7/17
-*/
-public class CyclicBarrierDemo {
+ * @description:
+ * @author: zcc
+ * @createDate: 2024/7/17
+ * @version: 1.0
+ */
+public class CyclicBarrierDemo2 {
     public static void main(String[] args) {
-        // CyclicBarrier(int parties, Runnable barrierAction)
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(7, () -> {
-            System.out.println(Thread.currentThread().getName() +"-----------召唤神龙成功");
-        });
+//        // CyclicBarrier(int parties, Runnable barrierAction)
+//        CyclicBarrier cyclicBarrier = new CyclicBarrier(7, () -> {
+//            System.out.println(Thread.currentThread().getName() +"-----------召唤神龙成功");
+//        });
+        Thread2 Thread2 = new Thread2();
+        CyclicBarrier cyclicBarrier1 = new CyclicBarrier(7, Thread2);
         for (int i = 1; i <= 14; i++) {
             final int tempInt = i;
             new Thread(() -> {
@@ -25,7 +26,7 @@ public class CyclicBarrierDemo {
                         "收集了第" + tempInt + "颗龙珠");
 
                 try {
-                    cyclicBarrier.await(); // 等待 +1
+                    cyclicBarrier1.await(); // 等待 +1
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (BrokenBarrierException e) {

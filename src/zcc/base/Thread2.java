@@ -3,7 +3,7 @@ package zcc.base;
 public class Thread2 implements Runnable{
     @Override
     public void run() {
-        System.out.println("Thread2");
+        System.out.println(Thread.currentThread().getName()+"----");
     }
 
     public static void main(String[] args) {
