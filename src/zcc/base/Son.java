@@ -4,6 +4,7 @@ public class Son extends Father {
 	private int i = test();
 	private static int a = 10;
 	private static int j = method();
+	private String b = "13";
 	static{
 		System.out.print("(6)");
 	}
@@ -30,5 +31,10 @@ public class Son extends Father {
 		Son s1 = new Son();  // (5)(1)(10)(6)(9)(3)(2)(9)(8)(7)
 		System.out.println();
 		Son s2 = new Son();
-	}
+        try {
+            s1.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
