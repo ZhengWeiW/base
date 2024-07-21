@@ -30,6 +30,8 @@ public class Main {
         String o = "str" + "ing";// 常量池中的对象
         String p = str6 + str7; // 常量池中的对象
         System.out.println(o == p);// true
+
+
     }
 
     public static String getStr() {

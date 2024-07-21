@@ -1,5 +1,5 @@
 package com.proxy;
 
-public interface LogService {
+public interface LogServiceJDK {
     void logTime();
 }
