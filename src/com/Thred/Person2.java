@@ -1,6 +1,8 @@
 package com.Thred;
 
-public class Person2 implements Comparable<Person2>{
+import java.util.concurrent.Callable;
+
+public class Person2 implements Callable, Comparable<Person2>{
     private int age;
     private String name;
 
@@ -42,4 +44,8 @@ public class Person2 implements Comparable<Person2>{
         return Integer.compare(this.age, other.age);
     }
 
+    @Override
+    public Object call() throws Exception {
+        return null;
+    }
 }

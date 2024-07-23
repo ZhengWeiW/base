@@ -18,7 +18,10 @@ public class PriorityBlockingQueueTest2 {
         pool.execute(new Person("3",3));
         pool.execute(new Person("1",1));
 
-        //Person2 必须实现Callable 方法
+        PriorityBlockingQueue<PrioritizedTask> queue = new PriorityBlockingQueue<>();
+        queue.add(new PrioritizedTask(1,()->"12"));
+        queue.add(new PrioritizedTask(1, ()-> "Low Priority Task"));
+        //Person2 必须实现Callable 方法  submit方法用于提交一个Runnable、Callable或FutureTask任务给线程池执行。
 //        for(int i = 10; i>0 ;i++){
 //
 //            pool.submit(new Runnable() {
