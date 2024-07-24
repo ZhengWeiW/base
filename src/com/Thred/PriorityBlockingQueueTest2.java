@@ -1,14 +1,14 @@
 package com.Thred;
 
-import java.util.concurrent.PriorityBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+
+import java.util.concurrent.*;
 
 public class PriorityBlockingQueueTest2 {
     public static void main(String[] args) {
         ThreadPoolExecutor pool =  new ThreadPoolExecutor(1, 2, 3L,
-                TimeUnit.SECONDS, new PriorityBlockingQueue<>(5),
+                TimeUnit.SECONDS, new PriorityBlockingQueue<>(5), Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
+
 
         pool.execute(new Person("6",7));
         pool.execute(new Person("5",5));
@@ -18,9 +18,21 @@ public class PriorityBlockingQueueTest2 {
         pool.execute(new Person("3",3));
         pool.execute(new Person("1",1));
 
+
         PriorityBlockingQueue<PrioritizedTask> queue = new PriorityBlockingQueue<>();
         queue.add(new PrioritizedTask(1,()->"12"));
         queue.add(new PrioritizedTask(1, ()-> "Low Priority Task"));
+        Future submit = pool.submit(new Person2("", 1));
+        try {
+            Object obj = submit.get();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+
+        pool.execute(new Person("1",1));
+
 
 
         for(int i = 100; i>0 ;i++) {
