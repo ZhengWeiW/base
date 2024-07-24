@@ -1,9 +1,6 @@
 package com.Thred;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.PriorityBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class PriorityBlockingQueueTest2 {
     public static void main(String[] args) {
