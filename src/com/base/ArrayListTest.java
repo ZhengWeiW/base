@@ -68,6 +68,19 @@ public class ArrayListTest {
          System.out.println(j); // 2
          System.out.println(k);  //
          //测试提交10
+         System.out.println("--------------------");  //
+         int[] a = new int[10];
+         a[0] = 6;
+         a[1] = 7;
+         a[2] = 8;
+         a[3] = 9;
+         // 你试图将数组a中从索引2开始的5个元素复制到从索引3开始的位置，这会导致从索引3开始的原始元素被覆盖，包括那些你原本打算复制过去的元素中的一部分
+         System.arraycopy(a, 2, a, 4, 5);
+         //a[2]=99;
+         for (int m = 0; m < a.length; m++) {
+             System.out.print(a[m] + " ");
          }
+     }
+
 
 }

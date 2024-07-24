@@ -21,6 +21,13 @@ public class PriorityBlockingQueueTest2 {
         PriorityBlockingQueue<PrioritizedTask> queue = new PriorityBlockingQueue<>();
         queue.add(new PrioritizedTask(1,()->"12"));
         queue.add(new PrioritizedTask(1, ()-> "Low Priority Task"));
+
+
+        for(int i = 100; i>0 ;i++) {
+            DelayPaymentSystem delayPaymentSystem = new DelayPaymentSystem();
+            delayPaymentSystem.processPayment(String.valueOf(i));
+        }
+
         //Person2 必须实现Callable 方法  submit方法用于提交一个Runnable、Callable或FutureTask任务给线程池执行。
 //        for(int i = 10; i>0 ;i++){
 //
