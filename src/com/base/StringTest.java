@@ -1,6 +1,8 @@
-package zcc.base;
+package com.base;
 
 import java.math.BigDecimal;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @Classname StringTest
@@ -66,6 +68,23 @@ public class StringTest {
          // 输出结果
          System.out.println("Part 1: " + part1);
          System.out.println("Part 2: " + part2);
+
+
+         System.out.println((5198.02+1299+1090));
+         ExecutorService executorService = Executors.newCachedThreadPool();
+         executorService.execute(new Runnable() {
+             @Override
+             public void run() {
+
+             }
+         });
+
+         executorService.submit(new Runnable() {
+             @Override
+             public void run() {
+
+             }
+         });
 
      }
 }

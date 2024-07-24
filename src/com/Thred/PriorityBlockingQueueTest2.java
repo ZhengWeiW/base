@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 public class PriorityBlockingQueueTest2 {
     public static void main(String[] args) {
         ThreadPoolExecutor pool =  new ThreadPoolExecutor(1, 2, 3L,
-                TimeUnit.SECONDS, new PriorityBlockingQueue<>(5),
+                TimeUnit.SECONDS, new PriorityBlockingQueue<>(5), Executors.defaultThreadFactory(),
                 new ThreadPoolExecutor.AbortPolicy());
 
 
@@ -19,6 +19,7 @@ public class PriorityBlockingQueueTest2 {
         pool.execute(new Person("2",2));
         pool.execute(new Person("3",3));
         pool.execute(new Person("1",1));
+
 
         PriorityBlockingQueue<PrioritizedTask> queue = new PriorityBlockingQueue<>();
         queue.add(new PrioritizedTask(1,()->"12"));
