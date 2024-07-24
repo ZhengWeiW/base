@@ -32,6 +32,22 @@ public class Main {
         System.out.println(o == p);// true
 
 
+
+        int h= 0;
+        while (true) {
+            // 等待队列非空
+
+            h++;
+            System.out.println("-----开始-------");
+            if(h>20){
+                return ;
+            }
+            System.out.println("-----结束-------");
+        }
+
+
+
+
     }
 
     public static String getStr() {
