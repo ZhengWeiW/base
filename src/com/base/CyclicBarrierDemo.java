@@ -8,7 +8,7 @@ import java.util.concurrent.CyclicBarrier;
 /**
 * @Description:  CyclicBarrier 与 CountDownLatch 都能实现阻塞主线程的效果，
  * CountDownLatch 是-1，CyclicBarrier 是+1，并且CyclicBarrier是可以重复使用，CountDownLatch不可以重复使用，
- * CyclicBarrier结束以后，主线程处理后续，CyclicBarrier最后完成的线程处理后续
+ * CountDownLatch 结束以后，主线程处理后续，CyclicBarrier最后完成的线程处理后续
 * @Param:
 * @return:
 * @Author: zcc

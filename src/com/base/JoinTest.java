@@ -14,10 +14,11 @@ public class JoinTest {
         });
 
         thread.start();
-
+        System.out.println("----------"+Thread.currentThread().getName());
         try {
             // 等待线程执行完毕
             thread.join();
+            System.out.println("----------"+Thread.currentThread().getName());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

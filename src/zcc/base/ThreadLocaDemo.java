@@ -9,6 +9,7 @@ public class ThreadLocaDemo {
         System.out.println(str + " :" + localVar.get());
         //清除本地内存中的本地变量
         //localVar.remove();
+
     }
     public static void main(String[] args) throws InterruptedException {
 
@@ -16,6 +17,11 @@ public class ThreadLocaDemo {
             public void run() {
                 ThreadLocaDemo.localVar.set("local_A");
                 print("A");
+                //打印本地变量
+                System.out.println("after remove : " + localVar.get());
+
+                ThreadLocaDemo.localVar.set("local_AA");
+                print("AA");
                 //打印本地变量
                 System.out.println("after remove : " + localVar.get());
 
